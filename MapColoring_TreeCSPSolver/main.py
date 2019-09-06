@@ -303,16 +303,16 @@ def main():
             print("N=", n)
             print("Tempo: ", execution_time)
 
-            with open('dataTreeCSP_2.csv', mode='a') as dataFile:
+            with open('dataTreeCSP.csv', mode='a') as dataFile:
                 dataFile = csv.writer(dataFile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 dataFile.writerow([n, domains, solver_time, execution_time])
 
-            with open('resultTreeCSP_2.csv', mode='a') as dataFile:
+            with open('resultTreeCSP.csv', mode='a') as dataFile:
                 dataFile = csv.writer(dataFile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
                 dataFile.writerow([n, result])
 
-            with open('treeCSPAdjacencyList_2.csv', mode='a') as dataFile:
+            with open('treeCSPAdjacencyList.csv', mode='a') as dataFile:
                 dataFile = csv.writer(dataFile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
                 dataFile.writerow([n, t_test.tree])
